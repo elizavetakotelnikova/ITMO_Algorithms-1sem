@@ -1,4 +1,4 @@
-//QuickSort
+#QuickSort
 
 n = int(input())
 array = [int(x) for x in input().split()]
@@ -23,7 +23,7 @@ def quicksort(ar, left, right):
 quicksort(array, 0, len(array)-1)
 print(*array)
 
-//Fence 
+#Fence 
 
 def quicksort(ar, left, right):
     i = left
@@ -71,7 +71,7 @@ for i in range(1, n):
             right = numbers[i][1]
 print(counter)
 
-//Anti-Quicksort (quicksort's worst case - O(n**2))
+#Anti-Quicksort (quicksort's worst case - O(n**2))
 
 n = int(input())
 numbers = [i for i in range(1, n+1)]
