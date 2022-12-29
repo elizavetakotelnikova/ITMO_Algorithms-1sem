@@ -1,4 +1,4 @@
-//Garland - binary search on answer (Гирлянда - как пример задачи на бинарный поиск по ответу)
+#Garland - binary search on answer (Гирлянда - как пример задачи на бинарный поиск по ответу)
 
 def Binary_search():
     left = 0
