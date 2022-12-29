@@ -1,4 +1,4 @@
-//insertion sort algorithm
+#insertion sort algorithm
 n = int(input())
 mas = [int(x) for x in input().split()]
 for i in range(1,n):
@@ -10,9 +10,9 @@ for i in range(1,n):
     mas[j+1] = key #key >= mas[j], значит вставляем туда элемент
 print(*mas)
 
-//solve some problems using an insertion sort
+#solve some problems using an insertion sort
 
-//expedition
+#expedition
 # сортировка вставками
 def sort_inserts(array):
     for i in range(1, len(array)):
@@ -49,7 +49,7 @@ while ((already < len(mass)) and (plots < len(info))):
         plots += 1
 print(counter)
 
-//olympic results 
+#olympic results 
 n = int(input())
 points = []
 def insertions(mas):
