@@ -1,4 +1,4 @@
-//Radix sort
+#Radix sort
 
 def counting_sort(a, r):
     max_letter = 'a'
