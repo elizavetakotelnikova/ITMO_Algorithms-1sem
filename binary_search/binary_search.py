@@ -1,4 +1,4 @@
-//Left and Right Binary search
+#Left and Right Binary search
 
 def Left_Binary_Search(array, x):
     left = 0
