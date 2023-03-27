@@ -17,6 +17,7 @@ struct Frame {
     char size[4];
     char flags[2];
 };
+
 //функция для подсчета нового размера фрейма, его установки
 void CalcNewFrameSize(char* frame_size, int value_size) { 
     for (int i = 0; i < 4; i++) {
@@ -24,6 +25,7 @@ void CalcNewFrameSize(char* frame_size, int value_size) {
         value_size -= frame_size[i] * pow(2, 7 * (3 - i));
     }
 }
+
 // функция для вывода фрейма
 void PrintFrame(FILE *f, long long int frame_size) {
     while (frame_size > 0) {
@@ -33,6 +35,7 @@ void PrintFrame(FILE *f, long long int frame_size) {
         frame_size--;
     }
 };
+
 // функция для подсчета размера фрейма
 int CalcFrameSize(char* arr) {
     int size = 0;
@@ -44,6 +47,7 @@ int CalcFrameSize(char* arr) {
     }
     return size;
 }
+
 // проверка на наличие дополнительного заголовка
 long long int CheckExtended(FILE *f, long long int counter, struct Header *main_header) {
     if (main_header->flag & 64) {
@@ -56,6 +60,7 @@ long long int CheckExtended(FILE *f, long long int counter, struct Header *main_
     return counter;
 }
 
+// функция для вывода всех фреймов
 void ShowAllFrames(const char *filename) {
     FILE *f = fopen(filename, "rb");
     struct Header main_header;
@@ -82,6 +87,8 @@ void ShowAllFrames(const char *filename) {
     }
     fclose(f);
 }
+
+// функция для вывода определенного фрейма
 void GetFrame(const char *filename, const char* prop_name) {
     FILE *f = fopen(filename, "rb");
     struct Header main_header;
@@ -104,6 +111,8 @@ void GetFrame(const char *filename, const char* prop_name) {
     }
     fclose(f);
 }
+
+// функция для установления значения фрейма
 void SetValue(const char *filename, const char* prop_name, char* value) {
     FILE *f = fopen(filename, "rb+");
     FILE *new_file = fopen("newfile.mp3", "wb+");
@@ -149,7 +158,6 @@ void SetValue(const char *filename, const char* prop_name, char* value) {
     fclose(f);
     fclose(new_file);
 }
-
 
 int main(int argc, char **argv){
     char* filename = NULL;
